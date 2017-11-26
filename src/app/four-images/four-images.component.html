@@ -1,0 +1,16 @@
+<div class="wrap">
+    <div class="container">
+      <div class="innerWrap">
+        <div *ngFor="let display of toDisplay; let i = index" class="repeat">
+          <div class="imgWrap">
+            <a [routerLink]="toDisplay[i].title"><img src="{{ toDisplay[i].imgUrl }}" alt=""></a>
+          </div>
+          <div class="textWrap">
+            <a [routerLink]="toDisplay[i].title"><h4>{{ toDisplay[i].title }}</h4></a>
+            <a [routerLink]="toDisplay[i].title"><p>{{ toDisplay[i].description.substring(0, 60) }}</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

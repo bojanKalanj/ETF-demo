@@ -1,0 +1,24 @@
+.videoTitle{
+    width: 50%;
+    border-bottom: 3px solid #50e3c2;
+}
+
+.videoTitle h2{
+    font-weight: 200;
+}
+
+.videoWrapper{
+    margin-top: 1%;
+    position: relative;
+	padding-bottom: 56.25%; 
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

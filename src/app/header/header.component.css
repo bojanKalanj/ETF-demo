@@ -1,0 +1,48 @@
+.headerWrap{
+    background: #fff;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid silver; 
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.links ul{
+    display: flex;
+}
+
+.links ul li{
+    margin-left: 50px;
+    position: relative;
+}
+
+.links ul li a{
+    text-transform: uppercase;
+}
+
+/* -------------------------- */
+
+.links ul li a:before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #50e3c2;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    transition: .5s;
+}
+
+.links ul li:hover a:before{
+    width: 100%;
+}
+
+

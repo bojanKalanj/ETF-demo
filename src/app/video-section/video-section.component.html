@@ -1,0 +1,4 @@
+<app-header></app-header>
+<app-large-video *ngIf="selectedVideo" [selectedVideo]="selectedVideo"></app-large-video>
+<app-video-row *ngIf="videos" [videos]="videos" (video)="onVideoSelected($event)"></app-video-row>
+

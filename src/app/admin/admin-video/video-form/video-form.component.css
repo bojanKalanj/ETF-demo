@@ -1,0 +1,45 @@
+.formWrap{
+    margin-top: 2%;
+}
+
+input{
+    height: 40px;    
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    border: 1px solid #333;
+}
+
+button{
+    width: 20%;
+    height: 40px;
+    border: none;
+    background: #333;
+    color: #fff;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.titleInut, .urlInut{
+    position: relative;
+}
+
+span{
+    position: absolute;
+    top: 40px;
+    color: red;
+}
+
+.btnError{
+    background: rgb(92, 92, 92);
+}
+
+.btnError:hover{
+    cursor: not-allowed;    
+}
+

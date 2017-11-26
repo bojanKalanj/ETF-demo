@@ -1,0 +1,68 @@
+.infoWrap{
+    width: 38%;
+    float: right;    
+}
+
+.infoWrap input{
+    margin-bottom: 2%;
+}
+
+.formWrap{
+    width: 57%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+h4{
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea{
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid #333;
+}
+
+input{
+    height: 50px;
+}
+
+textarea{
+    height: 500px;
+}
+
+.title, .imgUrl, .textArea{
+    margin-bottom: 3%;
+    position: relative;
+}
+
+span{
+    color: red;
+    position: absolute;
+}
+
+button{
+    width: 20%;
+    background: #333;
+    border: none;
+    color: #fff;
+    height: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.btnError{
+    background: rgb(92, 92, 92);
+}
+
+.btnError:hover{
+    cursor: not-allowed;    
+}
+

@@ -1,0 +1,25 @@
+    <div class="formWrap">
+        <h4>{{ sectionTitle }}</h4>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="title">
+                    <input [class.error]="title.invalid && title.touched" ngModel name="title" required #title="ngModel" type="text" placeholder="Title">
+                    <span *ngIf="title.invalid && title.touched">naslov je obavezan!</span>
+                </div>
+                <div class="imgUrl">
+                    <input [class.error]="imgUrl.invalid && imgUrl.touched" ngModel name="imgUrl" required #imgUrl="ngModel" type="text" placeholder="img url">
+                    <span *ngIf="imgUrl.invalid && imgUrl.touched">slika je obavezna!</span>
+                </div>
+                <div class="textArea">
+                    <textarea [class.error]="textArea.invalid && textArea.touched" ngModel name="textArea" required #textArea="ngModel" id="text" cols="30" rows="10"></textarea>
+                    <span *ngIf="textArea.invalid && textArea.touched">tekst je obavezan!</span>
+                </div>
+                <button [disabled]="f.invalid && f.touched" [class.btnError]="f.invalid && f.touched">Post</button>
+                <div class="infoWrap">
+                    <input ngModel #director="ngModel" name="director" type="text" placeholder="director">
+                    <input ngModel #writers="ngModel" name="writers" type="text" placeholder="writers">
+                    <input ngModel #stars="ngModel" name="stars" type="text" placeholder="stars">  
+                    <input ngModel #trailer="ngModel" name="trailer" type="text" placeholder="trailer">                            
+                </div>
+        </form>
+    </div>
+    

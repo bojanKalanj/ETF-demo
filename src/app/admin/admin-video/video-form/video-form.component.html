@@ -1,0 +1,22 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="onSubmitVideo(f)">
+      <div class="formWrap">
+          <div class="titleInut">
+            <input ngModel name="title" #title="ngModel" required type="text" placeholder="title">
+            <span *ngIf="title.invalid && title.touched">Naslov je obavezan</span>
+          </div>
+          <div class="titleInut">
+                <input ngModel name="img" #img="ngModel" required type="text" placeholder="img">
+                <span *ngIf="img.invalid && img.touched">img je obavezan</span>
+        </div>
+          <div class="urlInut">
+              <input ngModel name="url" #url="ngModel" required type="text" placeholder="url videa">
+              <span *ngIf="url.invalid && url.touched">Unesi youtube url</span>
+          </div>
+          <div class="textInut">
+              <textarea ngModel name="desc" #desc="ngModel" required name="desc" id="desc" cols="30" rows="10" placeholder="kratak opis videa"></textarea>
+          </div>
+          <button [disabled]="f.invalid && f.touched" [class.btnError]="f.invalid && f.touched" >Post</button>
+        </div>
+  </form>  
+</div>

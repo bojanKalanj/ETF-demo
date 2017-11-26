@@ -1,0 +1,90 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<div *ngIf="signinMode" class="wrapper">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="formWrap">
+          <div class="buttons">
+            <ul>
+              <li><button (click)="onSignIn('signIn')">Prijavi se</button></li>
+              <li><button (click)="onSignIn()">Registruj se</button></li>
+            </ul>
+          </div>
+          <div class="inputs">
+            <div class="inputUsername">
+              <div class="usernameIcon">
+                  <i [class.error]="username.invalid && username.touched" class="fa fa-user-o" aria-hidden="true"></i>
+              </div>
+              <div class="usernameInput">
+                <input ngModel #username="ngModel" required name="username" type="text" placeholder="Username">
+                <div *ngIf="username.invalid && username.touched" class="firstSpan"><span>ime je obavezno!</span></div>
+              </div>
+            </div>
+            <div class="inputPassword">
+                <div class="passwordIcon">
+                    <i [class.error]="password.invalid && password.touched" class="fa fa-lock" aria-hidden="true"></i>
+                </div>
+                <div class="passwordInput">
+                  <input ngModel #password="ngModel" required name="password" type="password" placeholder="Password">
+                  <div *ngIf="password.invalid && password.touched" class="secondSpan"><span>sifra je obavezna!</span></div>
+                </div>
+              </div>
+      
+          <button [disabled]="f.invalid && f.touched" [class.btnError]="f.invalid && f.touched">Sign in</button>
+          </div>
+        </div>
+  </form>
+
+  <div class="x">
+      <i routerLink="/pocetna" style="cursor:pointer" class="fa fa-times" aria-hidden="true"></i>  
+    </div>
+  </div>
+
+  <div *ngIf="!signinMode" class="wrapper">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="formWrap">
+              <div class="buttons">
+                <ul>
+                  <li><button (click)="onSignIn('signIn')">Prijavi se</button></li>
+                  <li><button (click)="onSignIn()">Registruj se</button></li>
+                </ul>
+              </div>
+              <div class="inputs">
+                <div class="inputUsername">
+                  
+                  <div class="usernameInput">
+                    <input ngModel #username="ngModel" required name="username" type="text" placeholder="Username">
+                    <div *ngIf="username.invalid && username.touched" class="firstSpan"><span>ime je obavezno!</span></div>
+                  </div>
+                </div>
+                <div class="inputUsername">
+                    
+                    <div class="usernameInput">
+                      <input ngModel #email="ngModel" required email name="email" type="email" placeholder="email">
+                      <div *ngIf="email.invalid && email.touched" class="firstSpan"><span>email je obavezan!</span></div>
+                    </div>
+                  </div>
+                <div class="inputPassword">
+                    
+                    <div class="passwordInput">
+                      <input ngModel #password="ngModel" required name="password" type="password" placeholder="Password">
+                      <div *ngIf="password.invalid && password.touched" class="secondSpan"><span>sifra je obavezna!</span></div>
+                    </div>
+                  </div>
+                  <div class="inputPassword">
+                      
+                      <div class="passwordInput">
+                        <input ngModel #confirmPassword="ngModel" required name="confirmPassword" type="password" placeholder="Confirm Password">
+                        <div *ngIf="confirmPassword.invalid && confirmPassword.touched" class="secondSpan"><span>potvrdi sifru!</span></div>
+                      </div>
+                    </div>
+          
+              <button [disabled]="f.invalid && f.touched" [class.btnError]="f.invalid && f.touched">Sign in</button>
+              </div>
+            </div>
+      </form>
+
+  <div class="x">
+    <i routerLink="/pocetna" style="cursor:pointer" class="fa fa-times" aria-hidden="true"></i>  
+  </div>
+</div>
+

@@ -1,0 +1,61 @@
+.wrapper{
+    display: flex;
+}
+
+.rightSide{
+    width: 85%;    
+}
+
+.header{
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header p{
+    padding-right: 10px;
+}
+
+/* ----------- */
+.leftMenu{
+    width: 15%;
+    height: 100vh;
+    background: #333;
+}
+
+.leftMenu h4{
+    height: 35px;
+    background: #3F3F3F;
+    text-align: center;
+    padding-top: 15px;
+    color: #fff;
+}
+/* 
+.leftMenu ul{
+    border: 1px solid red;
+} */
+
+.leftMenu li{
+    height: 50px;
+    display: flex;
+    align-items: center; 
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent; 
+}
+
+.leftMenu li:hover{
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.leftMenu li a{
+    padding-left: 4%;
+    color: #fff;
+}
+

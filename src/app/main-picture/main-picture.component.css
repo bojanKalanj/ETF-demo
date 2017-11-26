@@ -1,0 +1,60 @@
+/* .wrap{
+    width: 100%;
+    border-bottom: 1px solid silver;
+    position: relative;    
+} */
+
+/* .innerWrap{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;    
+    display: flex;
+} */
+
+.imgWarp{
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.imgWarp img{
+    max-width: 100%;
+}
+
+.textWrap{
+    margin: 5%;
+    margin-top: 0;
+    width: 50%;
+}
+
+.textWrap h2{
+    margin-bottom: 5%;
+}
+
+.textWrap p{
+    text-align: justify;
+}
+
+.btn{
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+}
+
+.btn button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border: 1px solid silver;
+    border-bottom: none;
+    background: #50e3c2;
+    color: #333;
+}
+
+/* ---------------- */
+.btn button:hover{
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.6s ease;        
+}

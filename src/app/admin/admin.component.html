@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="leftMenu">
+    <h4>Admin Panel</h4>
+    <ul> 
+      <li (click)="choseSection('vesti')"><a>Vesti</a></li>
+      <li (click)="choseSection('recenzije')"><a>Recenzije</a></li>
+      <li (click)="choseSection()"><a>Vesti</a></li>      
+    </ul>
+  </div>
+  <div class="rightSide">
+      <div class="header">
+          <a><p>Admin</p></a>  
+        </div>
+        <div class="content">
+            <app-admin-vesti *ngIf="choseNews"></app-admin-vesti>
+            <app-admin-recenzije *ngIf="choseRewievs"></app-admin-recenzije>
+            <app-admin-video *ngIf="choseVideos"></app-admin-video>
+        </div>
+  </div>
+</div>
+

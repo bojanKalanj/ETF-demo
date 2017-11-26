@@ -1,0 +1,29 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<div class="container">
+  <div *ngFor="let art of toDisplay; let i = index" class="wrap">
+      <div class="innerWrap">
+          <div class="left">
+            <p>3 days ago</p>
+            <h4>Share</h4>
+            <button (click)="onShare(i)"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+            <div *ngIf="share[i]" class="socialShare">
+              <ul>
+                <li><button><i class="fa fa-facebook" aria-hidden="true"></i></button></li>
+                <li><button><i class="fa fa-twitter" aria-hidden="true"></i></button></li>
+                <li><button><i class="fa fa-instagram" aria-hidden="true"></i></button></li>    
+              </ul>
+            </div>
+          </div>
+          <div class="middle"> 
+            <a [routerLink]="toDisplay[i].title"><img src= "{{ toDisplay[i].imgUrl }}" alt=""></a>
+          </div>
+          <div class="textWrap">
+            <a [routerLink]="toDisplay[i].title"><h2>{{ toDisplay[i].title }}</h2></a>
+            <a [routerLink]="toDisplay[i].title"><p>Procitaj jos <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p></a>
+          </div>
+      </div>
+  </div>
+  </div>
+  

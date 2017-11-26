@@ -1,0 +1,10 @@
+.header{
+    position: relative;
+}
+
+
+.social{
+    position: absolute;
+    top: 90px;
+    left: 0;
+}

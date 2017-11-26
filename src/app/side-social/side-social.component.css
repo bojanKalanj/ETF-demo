@@ -1,0 +1,30 @@
+.social ul{
+    list-style: none;
+}
+
+.social button{
+    background: transparent;
+    border: 1px solid #333;
+    width: 60px;
+    height: 40px;
+    padding: 10%;
+    margin-bottom: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------------- */
+.social button:hover{
+    border: transparent;
+    transition: 0.6s ease;    
+    background: #A0F8E4;
+    cursor: pointer;
+    color: #fff;
+}
+/* ----------------------- */
+
+
+.social i{
+    font-size: 15px;
+}
+

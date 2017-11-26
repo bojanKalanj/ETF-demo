@@ -1,0 +1,73 @@
+.wrap{
+    width:70%;
+}
+
+.left{
+    width: 15%;
+    padding-top: 2%;
+    margin-right: 3%;
+    border-top: 3px solid #50e3c2;
+}
+
+.left p{
+    font-size: 13px;
+}
+
+.left button{
+    /* position: relative; */
+    width: 50px;
+    height: 50px;
+    margin-top: 10%;
+    border: 1px solid #333;
+    background: transparent;
+}
+
+.left button:hover{
+    color: #50e3c2;
+    border: 1px solid #50e3c2;
+    cursor: pointer;
+}
+
+.socialShare{
+    position: absolute;
+    top: 120px;
+}
+
+.socialShare button{
+    margin: 0;
+    border-top: 1px solid transparent;
+}
+
+.fa-facebook{
+    color: #3b5998;
+}
+
+.fa-twitter{
+    color: #0084b4;
+}
+
+.fa-instagram{
+    color: #8a3ab9;
+}
+
+/* ------------------ */
+.middle{
+    width: 40%;
+    overflow: hidden;
+}
+
+.middle img{
+    width: 100%;
+}
+
+/* ------------------------- */
+.textWrap{
+    width: 45%;
+    margin-left: 3%;
+}
+
+.textWrap p{
+    margin-top: 7%;
+    font-size: 13px;
+}
+

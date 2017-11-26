@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div *ngIf="rightArticle" class="container">
+  <div class="leftSide">
+    <div class="leftSideText">
+      <h2>{{ rightArticle.title }}</h2>
+      <p class="date">05 ottobre 2017</p>
+      <p><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, odit numquam autem repudiandae explicabo sit beatae sint ut iste sunt soluta quis, ex ipsam. Qui quibusdam corporis recusandae magni dolore iusto praesentium quam facilis dignissimos sed possimus, aliquam saepe perferendis, tempore animi quia dolorem assumenda deserunt blanditiis earum. Animi, maxime! <br> <br>  </strong>  
+        {{ rightArticle.description }}
+      </div>
+  </div>
+  <div class="rightSide">
+    <div class="imgWrap">
+      <img src="{{ rightArticle.imgUrl }}" alt="">
+    </div>
+    <div *ngIf="rightArticle.info" class="desctext">
+      <p> <strong>Director:</strong>  <span *ngIf="rightArticle.info.director">{{ rightArticle.info.director }}</span></p>
+      <p> <strong>Writers:</strong> <span *ngIf="rightArticle.info.writers">{{ rightArticle.info.writers }}</span></p>
+      <p> <strong>Stars:</strong> <span *ngIf="rightArticle.info.stars">{{ rightArticle.info.stars }}</span></p>      
+    </div>
+    <div class="share">
+      <p>Share:</p>
+        <ul>
+            <li><button><i class="fa fa-facebook" aria-hidden="true"></i></button></li>
+            <li><button><i class="fa fa-twitter" aria-hidden="true"></i></button></li>
+            <li><button><i class="fa fa-instagram" aria-hidden="true"></i></button></li>    
+          </ul>
+    </div>
+  </div>
+</div>

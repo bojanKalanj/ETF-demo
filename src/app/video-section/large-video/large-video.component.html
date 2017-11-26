@@ -1,0 +1,9 @@
+    <div class="container">
+        <div class="videoTitle">
+          <h2>{{ selectedVideo.title }}</h2>
+        </div>
+          <div class="videoWrapper">
+              <iframe width="560" height="315" [src]="selectedVideo.video | video" frameborder="0" allowfullscreen></iframe>   
+          </div>
+      </div>
+
